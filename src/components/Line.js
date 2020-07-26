@@ -2,12 +2,17 @@ import React, { useState } from "react";
 
 const Line = ({ symbol, title }) => {
   const [hoverLine, setHoverLine] = useState(false);
+  // const [fingerTouch, setFingerTouch] = useState(false);
   const [copy, setCopy] = useState(false);
   return (
     <div
       className="line"
       onMouseEnter={() => setHoverLine(true)}
       onMouseLeave={() => setHoverLine(false)}
+      onTouchStart={() => {
+        navigator.clipboard.writeText(symbol);
+        setCopy(!copy);
+      }}
       onClick={() => {
         navigator.clipboard.writeText(symbol);
         setCopy(!copy);
