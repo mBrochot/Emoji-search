@@ -9,7 +9,7 @@ const Line = ({ symbol, title }) => {
       className="line"
       onMouseEnter={() => setHoverLine(true)}
       onMouseLeave={() => setHoverLine(false)}
-      onTouchMove={() => {
+      onTouch={() => {
         navigator.clipboard.writeText(symbol);
         setCopy(!copy);
       }}
