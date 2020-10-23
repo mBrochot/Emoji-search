@@ -36,7 +36,7 @@ When installation is complete :
 
 ```bash
 yarn start
-
+```
 
 <br/>
 
